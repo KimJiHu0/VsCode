@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>If02 Page</h1>
+
+    <!-- 만일 role가 admin이라면? 아래의 출력문 출력 -->
+    {% if role == 'admin' %}
+        <h2>admin page</h2>
+        <a href="#">List</a>
+        <a href="#">User Delete</a>
+
+    <!-- 만일 role가 manager라면? 아래의 출력문 출력 -->
+    {% elif role == 'manager' %}
+        <h2>manager page</h2>
+        <a href="#">List</a>
+    
+    <!-- 위의 두 조건이 false일 때 아래의 출력문 출력 -->
+    {% else %}
+        <h2>User page</h2>
+        <a href="#">List</a>
+
+    <!-- if문이 끝났을 때 무조건 작성해줘야하는 코드 -->
+    {% endif %}
+</body>
+</html>

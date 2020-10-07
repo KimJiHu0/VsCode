@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>href Page</h1>
+
+    <!-- href안의 값에는 요청값뿐만 아니라 url 직접적인 이름을 넣어서 보내줄 수 있다. -->
+    <!-- 이름은 urls에서 path지정하면서 지정이 가능하다 -->
+    <p><a href="{% url 'index' %}">Go index page</a></p>
+    <p><a href="{% url 'list' %}">Go list page</a></p>
+    <p><a href="{% url 'dct' %}">Go dct page</a></p>
+    <p><a href="{% url 'for' %}">Go for page</a></p>
+    <p><a href="{% url 'if01' %}">Go if01 page</a></p>
+    <p><a href="{% url 'if02' %}">Go if02 page</a></p>
+    <p><a href="{% url 'href' %}">Go href page</a></p>
+</body>
+</html>

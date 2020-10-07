@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>If01 Page</h1>
+
+    <!-- 만일 user에 id가 null이 아니라면 아래 출력문 출력 -->
+    {% if user.id %}
+        <p>id : {{user.id}}</p>
+        <p>name : {{user.name}}</p>
+    <!-- if문이 끝났을 때 무조건 작성해줘야하는 코드 -->
+    {% endif %}
+</body>
+</html>

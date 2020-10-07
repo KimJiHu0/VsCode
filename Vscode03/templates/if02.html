@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--role이 admin이라면-->
+    {% if role == 'admin' %}
+    <h1>Admin Page</h1>
+    <a href="#">user list</a>
+    <a href="#">user delete</a>
+
+    <!--role이 manager라면-->
+    {% elif role == 'manager' %}
+    <h1>Manager Page</h1>
+    <a href="#">user list</a>
+
+    <!--위의 조건이 전부 아니라면-->
+    {% else %}
+    <h1>User Page</h1>
+
+    <!--if문이 끝났을 때에 무조건 작성.-->
+    {% endif %}
+</body>
+</html>

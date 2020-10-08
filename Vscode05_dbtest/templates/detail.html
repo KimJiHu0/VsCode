@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Detail</h1>
+
+    <table border="1">
+        <tr>
+            <th>NAME</th>
+            <td><input type="text" value="{{dto.myname}}" readonly="readonly"/></td>
+        </tr>
+        <tr>
+            <th>TITLE</th>
+            <td><input type="text" value="{{dto.mytitle}}" readonly="readonly"/></td>
+        </tr>
+        <tr>
+            <th>CONTENT</th>
+            <td>
+                <textarea cols="60" rows="10" readonly="readonly">{{dto.mycontent}}</textarea>
+            </td>
+        </tr>
+        <tr>
+            <th>DATE</th>
+            <td><input type="text" value="{{dto.mydate}}" readonly="readonly"/></td>
+        </tr>
+        <tr>
+            <td colspan="4" align="right">
+                <input type="button" value="목록" onclick="location.href='/'"/>
+                <input type="button" value="수정" onclick="location.href='/updateform/{{dto.id}}'"/>
+                <input type="button" value="삭제" onclick="location.href='/delete/{{dto.id}}'"/>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

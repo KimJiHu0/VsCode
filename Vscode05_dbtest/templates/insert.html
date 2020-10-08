@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>insert</h1>
+
+    <form action="/insertres" method="POST">{%csrf_token%}
+        <table>
+            <tr>
+                <th>NAME</th>
+                <td><input type="text" name="myname"/></td>
+            </tr>
+            <tr>
+                <th>TITLE</th>
+                <td><input type="text" name="mytitle"/></td>
+            </tr>
+            <tr>
+                <th>CONTENT</th>
+                <td>
+                    <textarea name="mycontent" cols="60" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" align="right">
+                    <input type="button" value="취소" onclick="location.href='/'"/>
+                    <input type="submit" value="작성"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

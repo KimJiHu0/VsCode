@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>updateform</h1>
+
+    <!--제목 혹은 내용이 길어지면 오류나서 post로 잡아준다-->
+    <!--csrf_token을 써주지 않으면 Django에서 권한 접근을 막는다.-->
+    <!--이를 방지하기 위해서는 form태그에 아래의 코드를 작성해야한다.-->
+    <form action="/updateres" method="POST">{%csrf_token%}
+        <input type="hidden" name="id" value="{{dto.id}}"/>
+        <table border="1">
+            <tr>
+                <th>NAME</th>
+                <td>
+                    <input type="text" value="{{dto.myname}}" readonly="readonly"/>
+                </td>
+            </tr>
+            <tr>
+                <th>TITLE</th>
+                <td>
+                    <input type="text" value="{{dto.mytitle}}" name="mytitle"/>
+                </td>
+            </tr>
+            <tr>
+                <th>CONTENT</th>
+                <td>
+                    <textarea rows="10" cols="60" name="mycontent">{{dto.mycontent}}</textarea>
+                </td>
+            </tr>
+            <tr>
+                <th>DATE</th>
+                <td>
+                    <input type="text" value="{{dto.mydate}}" readonly="readonly"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" align="right">
+                    <input type="button" value="취소" onclick=""/>
+                    <input type="submit" value="수정"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
